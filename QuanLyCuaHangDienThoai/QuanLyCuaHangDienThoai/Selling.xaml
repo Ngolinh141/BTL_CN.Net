@@ -1,0 +1,147 @@
+﻿<Window x:Class="Quanlycuahangdienthoai.Selling"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quanlycuahangdienthoai"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="Selling" Height="450" Width="800">
+    <Grid>
+        <Label Content="MOBILE MANAGEMENT SYSTEM" Margin="184,-6,184,408" Width="NaN" Cursor="No" Foreground="#FF24D445" FontSize="24" FontFamily="Cooper Black"/>
+        <Label Content="Bill Id" HorizontalAlignment="Left" Margin="24,94,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="64"/>
+        <Label Content="Product" HorizontalAlignment="Left" Margin="24,134,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="86"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="24,174,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="64"/>
+        <Label Content="Mobiles" HorizontalAlignment="Left" Margin="386,47,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="86"/>
+        <Label Content="Accessiories" HorizontalAlignment="Left" Margin="609,47,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="134"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="24,214,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="86"/>
+        <Label x:Name="BillItem" Content="Bill" HorizontalAlignment="Left" Margin="260,271,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="47"/>
+        <Label x:Name="label1" Content="X" HorizontalAlignment="Left" Height="34" Margin="766,0,0,0" VerticalAlignment="Top" Width="24" Foreground="#FFD533C8" FontFamily="Cooper Black" FontSize="18" FontWeight="Bold">
+            <Label.InputBindings>
+                <MouseBinding Gesture="LeftClick" Command="{Binding ExitCommand}" />
+            </Label.InputBindings>
+        </Label>
+        <Button x:Name="bTb" Content="" HorizontalAlignment="Left" Margin="112,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="116" BorderThickness="0,0,0,5" BorderBrush="#FF5DC3FC" Height="23">
+            <Button.Background>
+                <SolidColorBrush Color="#FFFBFBFB" Opacity="1"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.376"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="ProductTb" Content="" HorizontalAlignment="Left" Margin="111,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="108" BorderThickness="0,0,0,5" BorderBrush="#FF5DC3FC" Height="23">
+            <Button.Background>
+                <SolidColorBrush Color="#FFFBFBFB" Opacity="1"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.296"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="PriceTb" Content="" HorizontalAlignment="Left" Margin="112,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.567" Width="106" BorderThickness="0,0,0,5" BorderBrush="#FF5DC3FC" Height="23">
+            <Button.Background>
+                <SolidColorBrush Color="#FFFBFBFB" Opacity="1"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.762"/>
+                    <TranslateTransform X="0.024" Y="-0.035"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="QtyTb" Content="" HorizontalAlignment="Left" Margin="112,214,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="106" BorderThickness="0,0,0,5" BorderBrush="#FF5DC3FC" Height="23">
+            <Button.Background>
+                <SolidColorBrush Color="#FFFBFBFB" Opacity="1"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.332"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="add"                          
+            BorderThickness="0"
+            Content="Add to bill"
+            Foreground="White"
+            FontSize="18"
+            FontFamily="Montserrat"
+            Cursor="Hand"
+            Click="addtobill_Click" Margin="10,271,597,139">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#462AD8"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#28AEED"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="150" Height="40"
+                        CornerRadius="20"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <DataGrid x:Name="MobiDGV" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="MobiDGV_SelectionChanged" Margin="308,84,267,196"/>
+        <DataGrid x:Name="AccessoriesDGV" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="AccessoriesDGV_SelectionChanged" Margin="553,84,22,196"/>
+        <Grid HorizontalAlignment="Left" Height="49" Margin="272,309,0,0" VerticalAlignment="Top" Width="35"/>
+        <DataGrid x:Name="BillDGV" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="MobiDGV_SelectionChanged" Margin="312,271,60,45"/>
+        <Button x:Name="print"                          
+            BorderThickness="0"
+            Content="Print"
+            Foreground="White"
+            FontSize="18"
+            FontFamily="Montserrat"
+            Cursor="Hand"
+            Click="print_Click" Margin="114,380,493,30">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#462AD8"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#28AEED"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="150" Height="40"
+                        CornerRadius="20"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label x:Name="Amount" Content="Amount" HorizontalAlignment="Left" Margin="166,348,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="88"/>
+        <Label x:Name="Rs" Content="Rs" HorizontalAlignment="Left" Margin="129,348,0,0" VerticalAlignment="Top" Foreground="#FFBE24BC" FontFamily="Britannic Bold" FontWeight="Bold" RenderTransformOrigin="7.632,0.805" FontSize="20" Height="32" Width="37"/>
+
+    </Grid>
+</Window>
